@@ -1,13 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Loadable from 'react-loadable';
-import { Provider as ReduxProvider } from 'react-redux'
+import { Provider as ReduxProvider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 
-import './index.css';
+import './index.scss';
 import App from './App';
 import configureStore from './store/configureStore';
-// import registerServiceWorker from './registerServiceWorker';
 
 const store = configureStore( window.__REDUX_STATE__ || {} );
 
@@ -27,5 +26,3 @@ window.onload = () => {
         );
     });
 };
-
-// registerServiceWorker();

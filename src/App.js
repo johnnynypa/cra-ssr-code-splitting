@@ -6,8 +6,7 @@ import { Route, Switch, NavLink } from 'react-router-dom';
 
 import { setMessage } from './store/appReducer';
 
-// import logo from './logo.svg';
-import './App.css';
+import './App.scss';
 
 
 const AsyncComponent = Loadable({
