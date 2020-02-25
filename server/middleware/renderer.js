@@ -6,7 +6,7 @@ import { StaticRouter } from 'react-router';
 import { Helmet } from 'react-helmet';
 
 // import our main App component
-import App from '../../src/App';
+import Routes from '../../src/routes';
 
 // import the manifest generated with the create-react-app build
 import manifest from '../../build/asset-manifest.json';
@@ -38,7 +38,7 @@ export default (store) => (req, res, next) => {
             <Loadable.Capture report={m => modules.push(m)}>
                 <ReduxProvider store={store}>
                     <StaticRouter location={req.baseUrl} context={routerContext}>
-                        <App/>
+                        <Routes/>
                     </StaticRouter>
                 </ReduxProvider>
             </Loadable.Capture>
